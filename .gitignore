@@ -1,0 +1,21 @@
+# macOS / Windows
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Dependencies and build output (none used today, ignored in case they are added)
+node_modules/
+dist/
+.cache/
+
+# Logs and secrets
+*.log
+.env
+.env.*
+
+# Local test pages
+__qa.html

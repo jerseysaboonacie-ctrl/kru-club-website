@@ -1,0 +1,75 @@
+/* Design tokens. Only these six colours are used on the site. */
+
+:root {
+  /* Palette (the only six colours on the site) */
+  --cream: #F0EDE4;     /* primary background */
+  --lime: #A5C94B;      /* featured sections */
+  --gold: #FFC12E;      /* highlights */
+  --sky: #38B5ED;       /* secondary sections */
+  --orange: #F28C28;    /* accents, decoration */
+  --charcoal: #252525;  /* ALL body text, ink lines, shadows */
+
+  /* Type families */
+  --font-marker: "Permanent Marker", "Marker Felt", "Comic Sans MS", cursive;   /* h1, h2 */
+  --font-brush: "Caveat Brush", "Gochi Hand", "Marker Felt", cursive;            /* h3, tagline, buttons */
+  --font-hand: "Gochi Hand", "Caveat Brush", "Bradley Hand", cursive;            /* notes, captions */
+  --font-type: "Special Elite", "Courier Prime", "Courier New", monospace;       /* labels, placeholders */
+  --font-body: "Nunito", "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-thai: "Mali", "Thonburi", "Leelawadee UI", "Noto Sans Thai", sans-serif;
+
+  /* Type scale (fluid) */
+  --fs-small: 0.95rem;
+  --fs-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);   /* 17 → 19px */
+  --fs-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.6rem);
+  --fs-h3: clamp(1.75rem, 1.5rem + 1vw, 2.4rem);
+  --fs-h2: clamp(2.6rem, 1.6rem + 4.2vw, 5.2rem);
+  --fs-mega: clamp(2.1rem, 1.3rem + 3.4vw, 4.4rem);
+  --fs-hero: clamp(5.75rem, 1.5rem + 16vw, 12.5rem);
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: 4.5rem;
+  --space-8: 7rem;
+  --section-pad: clamp(4.5rem, 3rem + 6vw, 8.5rem);
+  --gutter: clamp(16px, 4vw, 40px);
+  --container: 1180px;
+
+  /* Tilt rules: nothing sits perfectly straight */
+  --tilt-xs: 0.6deg;
+  --tilt-s: 1.5deg;
+  --tilt-m: 3deg;
+  --tilt-l: 5deg;
+
+  /* Hand-drawn shapes */
+  --line: 3px;                                                     /* ink line weight */
+  --wobble-r: 255px 18px 225px 18px / 18px 225px 18px 255px;       /* wonky box corners */
+  --wobble-r-2: 18px 225px 18px 255px / 255px 18px 225px 18px;     /* mirrored variant */
+  --shadow-hand: 6px 7px 0 var(--charcoal);                        /* flat "marker" shadow */
+  --shadow-hand-sm: 3px 4px 0 var(--charcoal);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);       /* scroll reveals */
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1); /* settle with a little overshoot */
+  --ease-squish: cubic-bezier(0.34, 1.9, 0.64, 1);  /* button release */
+  --dur-reveal: 0.7s;
+  --stagger: 90ms;
+  --rise: 24px;
+}
+
+/* Data attributes used by motion.css and motion.js. Rename them in both places.
+
+   data-reveal            fade + rise 24px when scrolled into view
+   data-stagger           parent: its direct [data-reveal] children stagger
+   data-draw              <svg> whose paths (pathLength="100") draw themselves
+   data-float="bob|twinkle|sway|wiggle|spin"   idle doodle loop (--dur, --delay)
+   data-parallax="0.2-1"  background doodle drift (40px max at 1)
+   data-polaroid          taped photo that settles into place
+   data-squish            button squish/bounce
+   data-count="123"       counter (only used once real numbers exist)
+   data-nav               the sticky header
+   data-wobble            heading split into irregular letters */
